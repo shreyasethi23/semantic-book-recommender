@@ -1,0 +1,272 @@
+[
+  {
+    "id": "book-001",
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "year": 1965,
+    "genres": ["Science Fiction", "Politics", "Adventure"],
+    "description": "A desert planet, political betrayal, ecological prophecy, and a reluctant hero navigating empire and destiny.",
+    "rating": 4.6
+  },
+  {
+    "id": "book-002",
+    "title": "Project Hail Mary",
+    "author": "Andy Weir",
+    "year": 2021,
+    "genres": ["Science Fiction", "Space", "Humor"],
+    "description": "A lone scientist wakes up in space and must solve an extinction-level scientific puzzle to save Earth.",
+    "rating": 4.7
+  },
+  {
+    "id": "book-003",
+    "title": "The Name of the Wind",
+    "author": "Patrick Rothfuss",
+    "year": 2007,
+    "genres": ["Fantasy", "Coming of Age", "Magic"],
+    "description": "A gifted young musician and magician recounts his rise from poverty to legend.",
+    "rating": 4.5
+  },
+  {
+    "id": "book-004",
+    "title": "The Lies of Locke Lamora",
+    "author": "Scott Lynch",
+    "year": 2006,
+    "genres": ["Fantasy", "Heist", "Crime"],
+    "description": "A brilliant con artist leads a gang of thieves through elaborate schemes in a dangerous canal city.",
+    "rating": 4.4
+  },
+  {
+    "id": "book-005",
+    "title": "The Martian",
+    "author": "Andy Weir",
+    "year": 2011,
+    "genres": ["Science Fiction", "Survival", "Engineering"],
+    "description": "An astronaut stranded on Mars survives through math, botany, and relentless problem-solving.",
+    "rating": 4.6
+  },
+  {
+    "id": "book-006",
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "year": 2011,
+    "genres": ["Nonfiction", "History", "Anthropology"],
+    "description": "A sweeping narrative of human evolution, culture, economics, and power structures.",
+    "rating": 4.4
+  },
+  {
+    "id": "book-007",
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018,
+    "genres": ["Nonfiction", "Productivity", "Self Help"],
+    "description": "Practical systems for building good habits through small consistent behavior changes.",
+    "rating": 4.5
+  },
+  {
+    "id": "book-008",
+    "title": "Deep Work",
+    "author": "Cal Newport",
+    "year": 2016,
+    "genres": ["Nonfiction", "Productivity", "Career"],
+    "description": "Strategies for focused concentration in a distracted world and producing high-value work.",
+    "rating": 4.2
+  },
+  {
+    "id": "book-009",
+    "title": "The Psychology of Money",
+    "author": "Morgan Housel",
+    "year": 2020,
+    "genres": ["Finance", "Nonfiction", "Behavioral Economics"],
+    "description": "Stories about risk, wealth, and how behavior often matters more than technical finance knowledge.",
+    "rating": 4.4
+  },
+  {
+    "id": "book-010",
+    "title": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "year": 2011,
+    "genres": ["Psychology", "Nonfiction", "Behavioral Science"],
+    "description": "A landmark exploration of intuitive and deliberate thinking and how biases shape decisions.",
+    "rating": 4.3
+  },
+  {
+    "id": "book-011",
+    "title": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "year": 2019,
+    "genres": ["Thriller", "Mystery", "Psychological"],
+    "description": "A psychotherapist investigates why a famous artist stopped speaking after a shocking crime.",
+    "rating": 4.1
+  },
+  {
+    "id": "book-012",
+    "title": "Gone Girl",
+    "author": "Gillian Flynn",
+    "year": 2012,
+    "genres": ["Thriller", "Mystery", "Crime"],
+    "description": "A marriage unravels under media scrutiny when a wife disappears and suspicion falls on her husband.",
+    "rating": 4.1
+  },
+  {
+    "id": "book-013",
+    "title": "Educated",
+    "author": "Tara Westover",
+    "year": 2018,
+    "genres": ["Memoir", "Nonfiction", "Education"],
+    "description": "A woman raised in an isolated survivalist family pursues education and redefines her identity.",
+    "rating": 4.5
+  },
+  {
+    "id": "book-014",
+    "title": "Becoming",
+    "author": "Michelle Obama",
+    "year": 2018,
+    "genres": ["Memoir", "Leadership", "Nonfiction"],
+    "description": "An intimate journey through family, career, public service, and life in the White House.",
+    "rating": 4.5
+  },
+  {
+    "id": "book-015",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "year": 1937,
+    "genres": ["Fantasy", "Adventure", "Classic"],
+    "description": "A comfort-loving hobbit joins a perilous quest involving dragons, treasure, and courage.",
+    "rating": 4.7
+  },
+  {
+    "id": "book-016",
+    "title": "The Fellowship of the Ring",
+    "author": "J.R.R. Tolkien",
+    "year": 1954,
+    "genres": ["Fantasy", "Epic", "Adventure"],
+    "description": "A group sets out to destroy a powerful ring before darkness consumes Middle-earth.",
+    "rating": 4.7
+  },
+  {
+    "id": "book-017",
+    "title": "1984",
+    "author": "George Orwell",
+    "year": 1949,
+    "genres": ["Dystopian", "Classic", "Political"],
+    "description": "A surveillance state crushes truth, language, and individual freedom under totalitarian control.",
+    "rating": 4.4
+  },
+  {
+    "id": "book-018",
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "year": 1932,
+    "genres": ["Dystopian", "Classic", "Science Fiction"],
+    "description": "A futuristic society engineered for stability questions freedom, meaning, and human emotion.",
+    "rating": 4.1
+  },
+  {
+    "id": "book-019",
+    "title": "The Midnight Library",
+    "author": "Matt Haig",
+    "year": 2020,
+    "genres": ["Fiction", "Philosophy", "Contemporary"],
+    "description": "Between life and death, a woman explores alternate lives shaped by different choices.",
+    "rating": 4.0
+  },
+  {
+    "id": "book-020",
+    "title": "A Man Called Ove",
+    "author": "Fredrik Backman",
+    "year": 2012,
+    "genres": ["Fiction", "Humor", "Contemporary"],
+    "description": "A grumpy but deeply human widower finds unexpected community and purpose.",
+    "rating": 4.5
+  },
+  {
+    "id": "book-021",
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "year": 1988,
+    "genres": ["Fiction", "Philosophy", "Adventure"],
+    "description": "A shepherd follows a recurring dream and discovers meaning through a spiritual journey.",
+    "rating": 3.9
+  },
+  {
+    "id": "book-022",
+    "title": "The Kite Runner",
+    "author": "Khaled Hosseini",
+    "year": 2003,
+    "genres": ["Historical", "Drama", "Fiction"],
+    "description": "Friendship, betrayal, and redemption unfold against decades of conflict in Afghanistan.",
+    "rating": 4.4
+  },
+  {
+    "id": "book-023",
+    "title": "Circe",
+    "author": "Madeline Miller",
+    "year": 2018,
+    "genres": ["Fantasy", "Mythology", "Historical"],
+    "description": "A reimagining of a mythic witch's life, voice, and transformation through exile and love.",
+    "rating": 4.3
+  },
+  {
+    "id": "book-024",
+    "title": "The Song of Achilles",
+    "author": "Madeline Miller",
+    "year": 2011,
+    "genres": ["Fantasy", "Mythology", "Romance"],
+    "description": "An emotional retelling of Achilles and Patroclus set against the Trojan War.",
+    "rating": 4.4
+  },
+  {
+    "id": "book-025",
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "year": 2008,
+    "genres": ["Programming", "Software Engineering", "Nonfiction"],
+    "description": "Principles and practices for writing maintainable readable code in professional teams.",
+    "rating": 4.3
+  },
+  {
+    "id": "book-026",
+    "title": "Designing Data-Intensive Applications",
+    "author": "Martin Kleppmann",
+    "year": 2017,
+    "genres": ["Programming", "Distributed Systems", "Nonfiction"],
+    "description": "Core ideas for reliable scalable data systems, from storage engines to stream processing.",
+    "rating": 4.7
+  },
+  {
+    "id": "book-027",
+    "title": "Hooked",
+    "author": "Nir Eyal",
+    "year": 2014,
+    "genres": ["Product", "Psychology", "Nonfiction"],
+    "description": "A framework for building habit-forming products through triggers, action, and rewards.",
+    "rating": 4.0
+  },
+  {
+    "id": "book-028",
+    "title": "The Lean Startup",
+    "author": "Eric Ries",
+    "year": 2011,
+    "genres": ["Startup", "Business", "Nonfiction"],
+    "description": "Build-measure-learn loops for reducing waste and validating products quickly.",
+    "rating": 4.1
+  },
+  {
+    "id": "book-029",
+    "title": "Zero to One",
+    "author": "Peter Thiel",
+    "year": 2014,
+    "genres": ["Startup", "Business", "Strategy"],
+    "description": "A contrarian lens on innovation, monopoly, and creating new categories in technology.",
+    "rating": 4.0
+  },
+  {
+    "id": "book-030",
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt and David Thomas",
+    "year": 1999,
+    "genres": ["Programming", "Software Engineering", "Career"],
+    "description": "Timeless software craftsmanship advice on thinking, tooling, and continuous improvement.",
+    "rating": 4.6
+  }
+]
