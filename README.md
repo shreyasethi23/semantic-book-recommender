@@ -118,20 +118,6 @@ Example request:
 }
 ```
 
-## Resume-ready bullet points
-
-- Built a full-stack semantic recommendation system using `FastAPI` and `React`, enabling natural-language book discovery with interpretable ranking.
-- Implemented dual-path retrieval (`sentence-transformers` + TF-IDF fallback) to maintain model quality while ensuring lightweight local execution.
-- Designed personalized ranking by blending query embeddings with favorite-item centroid vectors, improving relevance for repeat users.
-- Shipped typed API contracts, frontend integration, and backend tests to deliver a demo-ready ML product with production-style engineering standards.
-
-## Interview talking points
-
-- Why semantic search outperforms keyword matching for intent-heavy queries
-- Trade-offs: transformer embeddings vs sparse vectorizers (latency, quality, infra cost)
-- How personalization anchors affect rank order without requiring user-level training data
-- How to evolve this into a hybrid retrieval system (semantic + popularity + recency)
-
 ## Next iterations
 
 - Replace JSON seed with PostgreSQL + `pgvector`
