@@ -1,32 +1,72 @@
 # Semantic Book Recommender
 
-A portfolio-ready full-stack ML project that recommends books using semantic retrieval.
+A production-style full-stack ML project that recommends books based on intent, not just keywords.
 
-## What this demonstrates
+Users type natural language like "uplifting sci-fi with clever science," optionally select books they already like, and receive ranked recommendations with interpretable reasons.
 
-- **ML / retrieval engineering**: semantic search pipeline with two modes
-  - `sentence-transformers` embeddings (`all-MiniLM-L6-v2`) when installed
-  - TF-IDF fallback for lightweight local runs
-- **Backend engineering**: `FastAPI` service with typed request/response models and ranking logic
-- **Frontend engineering**: `React + TypeScript` app with:
-  - intent query box
-  - genre + year filtering
-  - favorite-book anchors to personalize results
-  - recommendation explanations and scores
-- **Product polish**: clean UI, robust error handling, health endpoint, reproducible local setup
+## Why this project stands out
 
-## Architecture
+- **Semantic retrieval pipeline** with automatic model fallback:
+  - `sentence-transformers` (`all-MiniLM-L6-v2`) for dense embeddings
+  - TF-IDF fallback for lightweight environments
+- **Personalization layer** that blends query intent with favorite-book anchors
+- **Full-stack implementation** (`FastAPI` + `React/TypeScript`)
+- **Explainable recommendations** with similarity score and reason strings
+- **Portfolio-ready engineering**: typed APIs, tests, clean UI, and clear docs
 
-- `backend/app/main.py` - API routes and app startup
-- `backend/app/recommender.py` - semantic ranking engine
-- `backend/app/models.py` - request/response and domain models
-- `backend/app/data/books_seed.json` - seed dataset
-- `frontend/src/App.tsx` - recommender interface
-- `frontend/src/api.ts` - API client layer
+## Product walkthrough
 
-## Quickstart
+### What the user does
 
-### 1) Backend
+1. Enter a natural-language reading intent.
+2. Add optional filters (genre, year).
+3. Select favorite anchor books for personalization.
+4. Review ranked results with score + explanation.
+
+### What the system does
+
+1. Converts each book (title, author, genres, description) into a semantic document.
+2. Builds embeddings (transformer) or vectorized features (TF-IDF fallback).
+3. Encodes the user query and blends with favorites centroid.
+4. Ranks catalog items via cosine similarity.
+5. Returns top-k recommendations and explanation metadata.
+
+## Architecture Diagram
+
+```mermaid
+flowchart LR
+    A[User Query + Filters + Favorites] --> B[React Frontend]
+    B -->|POST /api/recommend| C[FastAPI Backend]
+    C --> D[Semantic Recommender Engine]
+    D --> E[(Book Catalog JSON)]
+    D --> F[Encoder Layer]
+    F -->|preferred| G[Sentence-Transformers]
+    F -->|fallback| H[TF-IDF Vectorizer]
+    D --> I[Cosine Similarity Ranking]
+    I --> J[Top-K Results + Reasons]
+    J --> B
+```
+
+## Tech stack
+
+- **Frontend:** React, TypeScript, Vite
+- **Backend:** FastAPI, Pydantic
+- **ML/NLP:** sentence-transformers (optional), scikit-learn, NumPy
+- **Testing:** Pytest, FastAPI TestClient
+
+## Repository structure
+
+- `backend/app/main.py` - API routes and app setup
+- `backend/app/recommender.py` - retrieval and ranking logic
+- `backend/app/models.py` - typed contracts
+- `backend/app/data/books_seed.json` - seed catalog (30 books)
+- `backend/tests/test_api.py` - backend API tests
+- `frontend/src/App.tsx` - main product UI
+- `frontend/src/api.ts` - API client
+
+## Local development
+
+### 1) Start backend
 
 ```bash
 cd backend
@@ -36,15 +76,15 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload --port 8000
 ```
 
-Optional stronger semantic model:
+Install stronger semantic model (optional):
 
 ```bash
 pip install -r requirements-ml.txt
 ```
 
-### 2) Frontend
+### 2) Start frontend
 
-In a new terminal:
+In a second terminal:
 
 ```bash
 cd frontend
@@ -52,21 +92,21 @@ npm install
 npm run dev
 ```
 
-Frontend defaults to `http://localhost:8000` for API requests.
+Frontend reads `VITE_API_BASE` (defaults to `http://localhost:8000`).
 
-If you want a different API URL, create `frontend/.env`:
+Use `frontend/.env` if needed:
 
 ```bash
 VITE_API_BASE=http://localhost:8000
 ```
 
-## API
+## API endpoints
 
-- `GET /health` - service and active model
-- `GET /api/books` - all books in catalog
-- `POST /api/recommend` - semantic recommendations
+- `GET /health` - service health + active model
+- `GET /api/books` - returns full catalog
+- `POST /api/recommend` - returns ranked recommendations
 
-Example request body:
+Example request:
 
 ```json
 {
@@ -78,16 +118,23 @@ Example request body:
 }
 ```
 
-## Demo talking points (for interviews)
+## Resume-ready bullet points
 
-- Why semantic retrieval beats keyword matching for user intent
-- How graceful model fallback keeps the product functional on low-resource machines
-- How personalization anchors (`favorite_book_ids`) alter ranking behavior
-- Trade-offs between classic vectorizers vs transformer embeddings
+- Built a full-stack semantic recommendation system using `FastAPI` and `React`, enabling natural-language book discovery with interpretable ranking.
+- Implemented dual-path retrieval (`sentence-transformers` + TF-IDF fallback) to maintain model quality while ensuring lightweight local execution.
+- Designed personalized ranking by blending query embeddings with favorite-item centroid vectors, improving relevance for repeat users.
+- Shipped typed API contracts, frontend integration, and backend tests to deliver a demo-ready ML product with production-style engineering standards.
 
-## Next upgrades
+## Interview talking points
 
-- Add hybrid ranking (semantic + popularity + recency)
-- Move seed JSON to a database (Postgres + pgvector)
-- Add user auth and saved recommendation history
-- Add experiment tracking and offline eval metrics (MRR/NDCG)
+- Why semantic search outperforms keyword matching for intent-heavy queries
+- Trade-offs: transformer embeddings vs sparse vectorizers (latency, quality, infra cost)
+- How personalization anchors affect rank order without requiring user-level training data
+- How to evolve this into a hybrid retrieval system (semantic + popularity + recency)
+
+## Next iterations
+
+- Replace JSON seed with PostgreSQL + `pgvector`
+- Add user accounts and saved recommendation history
+- Add offline eval metrics (MRR, NDCG) and experiment tracking
+- Add Docker + cloud deployment pipeline (Render/Railway/Vercel)
